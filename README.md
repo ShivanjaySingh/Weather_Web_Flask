@@ -4,25 +4,25 @@
 
 
 Instructions to use
-1. You can create virtual environment
-  Use this commands to install virtual environment
-   pip install virtualenv
+1. You can create virtual environment :-
+  Use this commands to install virtual environment :-
+   pip install virtualenv,
    virtaulenv env
 
-2. Now activating virtaul enviornment
-   Use this command to activate
+2. Now activating virtaul enviornment :-
+   Use this command to activate :-
      .\env\scripts\activate.ps1
 
-3. Install Flask
+3. Install Flask :-
    pip install flask
 
-4. Install Flask-Sqlalchemy
+4. Install Flask-Sqlalchemy :-
    pip install flask-sqlalchemy
 
-5. Install requests
+5. Install requests :-
    pip install requests
 
-6. To run this application execute this command
+6. To run this application execute this command :-
    python app.py
 
 
