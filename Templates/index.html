@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+  <!-- Weather Card -->
+  <div class="weather-card">
+    <div class="search-box mb-4">
+      <form action="/" method="POST" id="weatherForm">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter city name" id="cityInput" name="cityname" required>
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="weatherDisplay" class="text-center weather-info">
+     {% if weather %}
+        <img src="https://openweathermap.org/img/wn/01d.png" alt="Weather Icon" class="weather-icon mb-2">
+      <h1>{{weather.temp}} °</h1>
+      <p>{{weather.weather}}</p>
+      <p class="text-muted"> {{weather.city}}, {{weather.country}}</p>
+
+      
+     {% else %}
+      <h1>Invalid City, Try Again!!!</h1>
+     
+      {% endif %}
+      <a href="/history" type="button" class="button btn-info">Search History</a>
+    </div>
+  </div>
+
+ {% endblock body %}

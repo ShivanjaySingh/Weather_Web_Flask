@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Your Search History</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="table-primary">
+        <th scope="col">S no.</th>
+        <th scope="col">City</th>
+        <th scope="col">Country</th>
+        <th scope="col">Temp</th>
+        <th scope="col">day</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% if weather|length == 0 %}
+        <h1>No History Available, Search now!!!</h1>
+        {% else %}
+      <tr>
+        {% for weath in weather %}
+        <th scope="row">{{loop.index}}</th>
+        <td>{{weath.city}}</td>
+        <td>{{weath.country}}</td>
+        <td>{{weath.temp}}</td>
+        <td>{{weath.weather}}</td>
+        <td><a href="/delete/{{weath.sno}}" type="button" class="btn btn-info">Delete</a></td>
+      </tr>
+      {% endfor %}
+      {% endif %}
+      
+    </tbody>
+  </table>
+
+{% endblock body %}

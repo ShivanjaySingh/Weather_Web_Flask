@@ -1,0 +1,55 @@
+
+body {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+}
+
+footer {
+  margin-top: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.weather-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.search-box input {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.weather-info h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.weather-info p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
